@@ -69,3 +69,9 @@ app.controller('myCtrl', function($scope) {
 ## Object Scope
 
 L'object `$scope` est l'application du modèle MVC (Model_View-Controller). Il relie le contrôleur et la vue. Les données du modèle sont stockées dans l'objet `$scope`.
+```javascript
+app.controller('myCtrl', function($scope) {
+  $scope.firstname = "Eliott";
+  $scope.lastname = "BURKLE";
+});
+```
