@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./node_modules/angular/angular.js"></script>
+  <title>AngularJs Start</title>
+</head>
+<body ng-app="myApp">
+
+  <div ng-controller="myCtrl" >
+    <p>Name: {{ name }}</p>
+    <p ng-hide="isDead" >En vie !</p>
+    <p ng-show="isDead"> {{message}} </p>
+  </div>
+
+  <script src="./app.js" ></script>
+</body>
+</html>
