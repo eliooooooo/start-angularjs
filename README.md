@@ -75,3 +75,7 @@ app.controller('myCtrl', function($scope) {
   $scope.lastname = "BURKLE";
 });
 ```
+
+
+FILTERS (UPPERCASE, LOWERCASE, CURRENCY, LIMIT TO, ORDERBY(-)) (CAN BE USE IN DIRECTIVE (NG))
+NG-CLICK

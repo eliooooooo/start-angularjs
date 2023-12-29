@@ -6,13 +6,16 @@
   <script src="./node_modules/angular/angular.js"></script>
   <title>AngularJs Start</title>
 </head>
+<!-- Toujours appeler l'app en question -->
 <body ng-app="myApp">
 
+  <!-- Toujours appeler le controller contenant les variables souhaitées -->
   <div ng-controller="myCtrl" >
-    <p>Name: {{ name }}</p>
-    <p ng-hide="isDead" >En vie !</p>
-    <p ng-show="isDead"> {{message}} </p>
-  </div>
+    <h2>Reviews</h2>
+    <div ng-repeat="review in reviews">
+      div.
+    </div>
+
 
   <script src="./app.js" ></script>
 </body>
