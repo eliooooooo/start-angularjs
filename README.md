@@ -49,6 +49,13 @@ npm install angular
 <div ng-controller="myCtrl">
 ```
 
+## Ng-click
+
+`ng-click` est une directive qui vous permet d'exécuter une expression ou une fonction lorsque l'élément est cliqué.
+```html
+<button ng-click="count = count + 1">Click me !</button>
+```
+
 ## Concaténation 
 
 En AngularJS, vous pouvez concaténer des chaînes de caractères en utilisant l'opérateur `+`.
@@ -76,6 +83,30 @@ app.controller('myCtrl', function($scope) {
 });
 ```
 
+## Filters
 
-FILTERS (UPPERCASE, LOWERCASE, CURRENCY, LIMIT TO, ORDERBY(-)) (CAN BE USE IN DIRECTIVE (NG))
-NG-CLICK
+Les filtres en AngularJS permettent de formater les données pour l'affichage à l'utilisateur. Ils peuvent être utilisés dans les directives, les vues, les contrôleurs ou les services. AngularJS fournit un ensemble de filtres intégrés, mais vous pouvez également créer vos propres filtres.
+
+Voici quelques filtres intégrés :
+
+- `uppercase` : transforme le texte en majuscules.
+- `lowercase` : transforme le texte en minuscules.
+- `currency` : formate un nombre en devise.
+- `limitTo` : limite un tableau ou une chaîne à une longueur spécifique.
+- `orderBy` : trie un tableau par un critère spécifique.
+
+Exemple d'utilisation d'un filtre dans une directive :
+
+```html
+<p>{{ name | uppercase }}</p>
+```
+
+NG-MODEL (in form)
+NG-SUBMIT
+submitting forms
+NG-VALID
+NG-INVALID
+NG-PRISTINE
+NG-DIRTY
+VALID ATTRIBUTE
+FORM VALIDATION

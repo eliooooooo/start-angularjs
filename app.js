@@ -28,20 +28,28 @@ app.controller('myCtrl', ['$scope', function($scope) {
   $scope.toggleshow = function(){
     $scope.show = !$scope.show;
   }
+  // form submit exemple
+  $scope.form = {};
+  $scope.addReview = function(){
+    $scope.reviews.push($scope.form);
+    $scope.form = {};
+  }
 
   $scope.reviews = [
     {
       comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatem.',
-      by: 'John Doe',
+      by: 'John.Doe@email.com',
     },
     {
       comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatem.',
-      by: 'John Doe',
+      by: 'John.Doe@email.com',
     },
     {
       comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatem.',
-      by: 'John Doe',
+      by: 'John.Doe@email.com',
     }
   ]
+
+
 
 }]);

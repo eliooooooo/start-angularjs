@@ -1,0 +1,16 @@
+.review {
+    background-color: #EEEEEE;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: red;
+}
+
+.ng-valid.ng-dirty {
+    border-color: green;
+}
+
+input, 
+textarea {
+    border: 2px solid;
+}

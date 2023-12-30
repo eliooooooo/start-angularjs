@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./node_modules/angular/angular.js"></script>
+  <link rel="stylesheet" href="style.css">
   <title>AngularJs Start</title>
 </head>
 <!-- Toujours appeler l'app en question -->
@@ -13,8 +14,29 @@
   <div ng-controller="myCtrl" >
     <h2>Reviews</h2>
     <div ng-repeat="review in reviews">
-      div.
+      <div class="review">
+        <p> {{ review.comment }} </p>
+        <p><b> {{ review.by }} </b></p>
+      </div>
     </div>
+
+    <form name="ReviewForm" ng-submit= "ReviewForm.$valid && addReview()" novalidate>
+
+      <p> {{ form.comment }} </p>
+      <p> {{ form.by }} </p>
+
+      <label>Comment</label><br>
+      <textarea ng-model="form.comment" required></textarea><br>
+      <label>Author</label><br>
+      <input type="email" ng-model="form.by" required><br>
+
+      <input type="submit" value="Add Review"><br>
+
+      <p> Form valid ? {{ ReviewForm.$valid }} </p>
+
+
+
+    </form>
 
 
   <script src="./app.js" ></script>
