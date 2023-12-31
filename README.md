@@ -56,6 +56,36 @@ npm install angular
 <button ng-click="count = count + 1">Click me !</button>
 ```
 
+## Ng-model (in form)
+
+`ng-model` est une directive qui lie la valeur d'une entrée HTML à une propriété sur le scope. C'est essentiel pour la liaison bidirectionnelle des données.
+
+```html
+<input type="text" ng-model="name">
+```
+
+## Ng-submit
+
+`ng-submit` est une directive qui permet d'éxecuter une expression ou une fonction lorsque le formulaire est soumis
+```html
+<form ng-submit="submitForm()">
+```
+
+## Ng-valid / Ng-invalid
+
+`ng-valid` et `ng-invalid` sont des classes en CSS qui sont ajoutées automatiquement par AngularJS en fonction de la validité des champs de votre formulaire
+
+## Ng-pristine / Ng-dirty
+
+`ng-pristine` et `ng-dirty` sont des classes CSS qui sont ajoutées automatiquement par AngularJS. `ng-pristine` est ajouté si le champ n'a pas été modifié, `ng-dirty` si le champ à été modifié.
+
+## Ng-include
+
+`ng-include` est une directive qui permet d'inclure du contenu HTML externa dans votre vue.
+```html
+<div ng-include="'mytemplate.html'"></div>
+```
+
 ## Concaténation 
 
 En AngularJS, vous pouvez concaténer des chaînes de caractères en utilisant l'opérateur `+`.
@@ -101,15 +131,36 @@ Exemple d'utilisation d'un filtre dans une directive :
 <p>{{ name | uppercase }}</p>
 ```
 
-NG-MODEL (in form)
-NG-SUBMIT
-submitting forms
-NG-VALID
-NG-INVALID
-NG-PRISTINE
-NG-DIRTY
-VALID ATTRIBUTE
-FORM VALIDATION  
-NG-INCLUDE
-CUSTOM DIRECTIVES
-DEPENDENCIES
+## Submitting forms
+
+Pour soumettre un formulaire en AngularJS, vous pouvez utiliser la directive `ng-submit` comme mentionné ci-dessus. Vous pouvez également utiliser `ng-click` sur le boutton de soumission.
+
+## Valid attribute
+
+La validation des formulaires en AngularJS peut être effectuée en utilisant des attributs HTML tels que `required`, `min`, `max`, `pattern`, etc.
+
+## Form validation
+
+AngularJS fournit une validation de formulaire puissante et flexible. Vous pouvez utiliser des attributs HTML pour la validation, et AngularJS ajoutera automatiquement certaines classes CSS pour vous aider à styliser les éléments valides et invalides.
+
+## Custom directives 
+
+Les directives personnalisées vous permettent de créer vos propres directives, par exemple :
+```javascript
+app.directive('myDirective', function() {
+  return {
+    template: '<h1>Custom directive!</h1>'
+  };
+});
+```
+
+## Dependencies
+
+Les dépendances en AngularJS sont gérées par l'injection de dépendances. Vous pouvez ajouter des dépendances à votre module en les ajoutant dans la liste des  dépendances lors de la création du module, ou à votre contrôleur en les ajoutant à la fonction du contrôleur.
+```javascript
+let app = angular.module('myApp', ['ngRoute']); // Ajout de ngRoute comme dépendance du module
+
+app.controller('myCtrl', ['$scope', '$http', function($scope, $http) { // Ajout de $http comme dépendance du contrôleur
+  // ...
+}]);
+```
